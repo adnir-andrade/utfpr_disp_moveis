@@ -1,9 +1,9 @@
+import { useState } from "react";
 import { View, Text, TextInput, StyleSheet, Button } from "react-native";
-import React from "react";
 
 export default function Login() {
-  const [username, setUsername] = React.useState("");
-  const [password, setPassword] = React.useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleClick = () => {
     console.log(username);
@@ -25,7 +25,7 @@ export default function Login() {
         value={password}
         onChangeText={setPassword}
         placeholder="Super secret password"
-        secureTextEntry={true}
+        secureTextEntry
       />
 
       <Button
