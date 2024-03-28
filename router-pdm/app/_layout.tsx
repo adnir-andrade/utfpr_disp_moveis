@@ -13,6 +13,10 @@ export default function Layout() {
           fontWeight: "bold",
         },
       }}
-    />
+    >
+      <Stack.Screen name="index" options={{ title: "Home" }} />
+      <Stack.Screen name="dm/index" options={{ title: "DM View" }} />
+      <Stack.Screen name="player/[id]" options={{ title: "Player View" }} />
+    </Stack>
   );
 }
