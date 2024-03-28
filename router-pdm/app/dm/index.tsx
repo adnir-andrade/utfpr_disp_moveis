@@ -5,9 +5,15 @@ import React from "react";
 export default function DungeonMaster() {
   const navigation = useNavigation();
 
+  const getRandomId = () => {
+    return Math.floor(Math.random() * 100) + 1;
+  };
+
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Link href={{ pathname: "/player" }}>Go to Player View</Link>
+      <Link href={{ pathname: `/player/${getRandomId()}` }}>
+        Go to Player View
+      </Link>
       <Button title="Go to Index" onPress={() => router.replace("/")}></Button>
     </View>
   );
