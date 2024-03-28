@@ -7,8 +7,8 @@ export default function Page() {
     <View style={styles.container}>
       <View style={styles.main}>
         <Text style={styles.title}>Routes</Text>
-        <Link href="/player/Player">Player View</Link>
-        <Link href="/dm/DungeonMaster">Dungeon Master View</Link>
+        <Link href={"/player"}>Player View</Link>
+        <Link href="/dm">Dungeon Master View</Link>
       </View>
     </View>
   );
