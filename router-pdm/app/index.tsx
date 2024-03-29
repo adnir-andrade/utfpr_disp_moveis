@@ -1,13 +1,19 @@
+import { StyleSheet, Text, View } from "react-native";
 import { Link } from "expo-router";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
 
-export default function Page() {
+export default function Main() {
+  const getRandomId = () => {
+    return Math.floor(Math.random() * 100) + 1;
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.main}>
         <Text style={styles.title}>Routes</Text>
-        <Link href={"/player"}>Player View</Link>
+        <Link href={{ pathname: `/player/${getRandomId()}` }}>
+          Player View{" "}
+        </Link>
         <Link href="/dm">Dungeon Master View</Link>
       </View>
     </View>

@@ -1,9 +1,9 @@
+import { Link, useRouter } from "expo-router";
 import { Button, View } from "react-native";
-import { Link, useNavigation, router } from "expo-router";
 import React from "react";
 
 export default function DungeonMaster() {
-  const navigation = useNavigation();
+  const router = useRouter();
 
   const getRandomId = () => {
     return Math.floor(Math.random() * 100) + 1;
@@ -14,7 +14,8 @@ export default function DungeonMaster() {
       <Link href={{ pathname: `/player/${getRandomId()}` }}>
         Go to Player View
       </Link>
-      <Button title="Go to Index" onPress={() => router.replace("/")}></Button>
+
+      <Button title="Go to Index" onPress={() => router.push("/")}></Button>
     </View>
   );
 }

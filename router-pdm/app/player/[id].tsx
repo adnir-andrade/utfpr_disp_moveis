@@ -1,6 +1,5 @@
+import { Link, router, useLocalSearchParams } from "expo-router";
 import { Button, View, Text } from "react-native";
-import { Link, router } from "expo-router";
-import { useLocalSearchParams } from "expo-router";
 import React from "react";
 
 export default function Player() {
